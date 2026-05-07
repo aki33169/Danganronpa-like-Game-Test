@@ -1,0 +1,299 @@
+{
+  "Unity MonoBehaviour Class": {
+    "scope": "csharp",
+    "prefix": "umono",
+    "body": [
+      "using UnityEngine;",
+      "",
+      "public class ${1:${TM_FILENAME_BASE}} : MonoBehaviour",
+      "{",
+      "    private void Start()",
+      "    {",
+      "        $0",
+      "    }",
+      "",
+      "    private void Update()",
+      "    {",
+      "    }",
+      "}"
+    ],
+    "description": "Create a Unity MonoBehaviour class with Start and Update"
+  },
+  "SerializeField": {
+    "scope": "csharp",
+    "prefix": "sfield",
+    "body": [
+      "[SerializeField] private ${1:GameObject} ${2:target};$0"
+    ],
+    "description": "Create a private serialized Unity field"
+  },
+  "Header SerializeField": {
+    "scope": "csharp",
+    "prefix": "hfield",
+    "body": [
+      "[Header(\"${1:Settings}\")]",
+      "[SerializeField] private ${2:float} ${3:value};$0"
+    ],
+    "description": "Create a serialized field with a Unity Inspector header"
+  },
+  "RequireComponent": {
+    "scope": "csharp",
+    "prefix": "reqcomp",
+    "body": [
+      "[RequireComponent(typeof(${1:Rigidbody}))]"
+    ],
+    "description": "Add a Unity RequireComponent attribute"
+  },
+  "Awake": {
+    "scope": "csharp",
+    "prefix": "uawake",
+    "body": [
+      "private void Awake()",
+      "{",
+      "    $0",
+      "}"
+    ],
+    "description": "Unity Awake method"
+  },
+  "Start": {
+    "scope": "csharp",
+    "prefix": "ustart",
+    "body": [
+      "private void Start()",
+      "{",
+      "    $0",
+      "}"
+    ],
+    "description": "Unity Start method"
+  },
+  "Update": {
+    "scope": "csharp",
+    "prefix": "uupdate",
+    "body": [
+      "private void Update()",
+      "{",
+      "    $0",
+      "}"
+    ],
+    "description": "Unity Update method"
+  },
+  "FixedUpdate": {
+    "scope": "csharp",
+    "prefix": "ufixed",
+    "body": [
+      "private void FixedUpdate()",
+      "{",
+      "    $0",
+      "}"
+    ],
+    "description": "Unity FixedUpdate method"
+  },
+  "LateUpdate": {
+    "scope": "csharp",
+    "prefix": "ulate",
+    "body": [
+      "private void LateUpdate()",
+      "{",
+      "    $0",
+      "}"
+    ],
+    "description": "Unity LateUpdate method"
+  },
+  "OnEnable": {
+    "scope": "csharp",
+    "prefix": "uenable",
+    "body": [
+      "private void OnEnable()",
+      "{",
+      "    $0",
+      "}"
+    ],
+    "description": "Unity OnEnable method"
+  },
+  "OnDisable": {
+    "scope": "csharp",
+    "prefix": "udisable",
+    "body": [
+      "private void OnDisable()",
+      "{",
+      "    $0",
+      "}"
+    ],
+    "description": "Unity OnDisable method"
+  },
+  "OnDestroy": {
+    "scope": "csharp",
+    "prefix": "udestroy",
+    "body": [
+      "private void OnDestroy()",
+      "{",
+      "    $0",
+      "}"
+    ],
+    "description": "Unity OnDestroy method"
+  },
+  "OnCollisionEnter": {
+    "scope": "csharp",
+    "prefix": "ucolenter",
+    "body": [
+      "private void OnCollisionEnter(Collision collision)",
+      "{",
+      "    $0",
+      "}"
+    ],
+    "description": "Unity 3D collision enter callback"
+  },
+  "OnCollisionExit": {
+    "scope": "csharp",
+    "prefix": "ucolexit",
+    "body": [
+      "private void OnCollisionExit(Collision collision)",
+      "{",
+      "    $0",
+      "}"
+    ],
+    "description": "Unity 3D collision exit callback"
+  },
+  "OnTriggerEnter": {
+    "scope": "csharp",
+    "prefix": "utrigenter",
+    "body": [
+      "private void OnTriggerEnter(Collider other)",
+      "{",
+      "    $0",
+      "}"
+    ],
+    "description": "Unity 3D trigger enter callback"
+  },
+  "OnTriggerExit": {
+    "scope": "csharp",
+    "prefix": "utrigexit",
+    "body": [
+      "private void OnTriggerExit(Collider other)",
+      "{",
+      "    $0",
+      "}"
+    ],
+    "description": "Unity 3D trigger exit callback"
+  },
+  "OnCollisionEnter2D": {
+    "scope": "csharp",
+    "prefix": "ucol2denter",
+    "body": [
+      "private void OnCollisionEnter2D(Collision2D collision)",
+      "{",
+      "    $0",
+      "}"
+    ],
+    "description": "Unity 2D collision enter callback"
+  },
+  "OnTriggerEnter2D": {
+    "scope": "csharp",
+    "prefix": "utrig2denter",
+    "body": [
+      "private void OnTriggerEnter2D(Collider2D other)",
+      "{",
+      "    $0",
+      "}"
+    ],
+    "description": "Unity 2D trigger enter callback"
+  },
+  "GetComponent": {
+    "scope": "csharp",
+    "prefix": "gcomp",
+    "body": [
+      "${1:var} ${2:component} = GetComponent<${3:Rigidbody}>();$0"
+    ],
+    "description": "Get a Unity component"
+  },
+  "TryGetComponent": {
+    "scope": "csharp",
+    "prefix": "trycomp",
+    "body": [
+      "if (TryGetComponent<${1:Rigidbody}>(out var ${2:component}))",
+      "{",
+      "    $0",
+      "}"
+    ],
+    "description": "Try to get a Unity component"
+  },
+  "FindObjectOfType": {
+    "scope": "csharp",
+    "prefix": "findobj",
+    "body": [
+      "${1:var} ${2:target} = FindObjectOfType<${3:TypeName}>();$0"
+    ],
+    "description": "Find a Unity object of type"
+  },
+  "Instantiate": {
+    "scope": "csharp",
+    "prefix": "inst",
+    "body": [
+      "${1:GameObject} ${2:instance} = Instantiate(${3:prefab}, ${4:transform.position}, ${5:Quaternion.identity});$0"
+    ],
+    "description": "Instantiate a Unity prefab"
+  },
+  "Destroy": {
+    "scope": "csharp",
+    "prefix": "udestroyobj",
+    "body": [
+      "Destroy(${1:gameObject});$0"
+    ],
+    "description": "Destroy a Unity object"
+  },
+  "Coroutine": {
+    "scope": "csharp",
+    "prefix": "ucoroutine",
+    "body": [
+      "private IEnumerator ${1:Routine}()",
+      "{",
+      "    yield return ${2:null};",
+      "    $0",
+      "}"
+    ],
+    "description": "Create a Unity coroutine"
+  },
+  "StartCoroutine": {
+    "scope": "csharp",
+    "prefix": "startcor",
+    "body": [
+      "StartCoroutine(${1:Routine}());$0"
+    ],
+    "description": "Start a Unity coroutine"
+  },
+  "WaitForSeconds": {
+    "scope": "csharp",
+    "prefix": "waitsec",
+    "body": [
+      "yield return new WaitForSeconds(${1:1f});$0"
+    ],
+    "description": "Yield WaitForSeconds in a Unity coroutine"
+  },
+  "Debug Log": {
+    "scope": "csharp",
+    "prefix": "ulog",
+    "body": [
+      "Debug.Log(${1:\"message\"});$0"
+    ],
+    "description": "Unity Debug.Log"
+  },
+  "Input GetKeyDown": {
+    "scope": "csharp",
+    "prefix": "ukey",
+    "body": [
+      "if (Input.GetKeyDown(KeyCode.${1:Space}))",
+      "{",
+      "    $0",
+      "}"
+    ],
+    "description": "Unity Input.GetKeyDown block"
+  },
+  "Scene Load": {
+    "scope": "csharp",
+    "prefix": "loadscene",
+    "body": [
+      "SceneManager.LoadScene(${1:\"SceneName\"});$0"
+    ],
+    "description": "Load a Unity scene. Requires using UnityEngine.SceneManagement"
+  }
+}
